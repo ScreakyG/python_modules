@@ -73,7 +73,7 @@ class LogProcessor(DataProcessor):
 
         return True
 
-    def ingest(self, data: dict | list[dict]) -> None:
+    def ingest(self, data: dict[str, str] | list[dict[str, str]]) -> None:
 
         if self.validate(data) == False:
             raise Exception("Improprer dict data")
