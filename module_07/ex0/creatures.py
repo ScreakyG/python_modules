@@ -5,7 +5,8 @@ class Creature(ABC):
     def __init__(self, name: str, type: str) -> None:
         self._name = name
         self._type = type
-        
+        super().__init__()
+
     @abstractmethod
     def attack(self) -> str:
         pass
@@ -41,7 +42,6 @@ class Aquabub(Creature):
 class Torragon(Creature):
     def __init__(self) -> None:
         super().__init__("Torragon", "Water")
-    
+
     def attack(self) -> str:
         return (f"{self._name} uses Hydro Pump!")
-    

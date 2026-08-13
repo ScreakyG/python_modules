@@ -26,8 +26,7 @@ class Bloomelle(Creature, HealCapability):
 class Shiftling(Creature, TransformCapability):
     def __init__(self) -> None:
         super().__init__("Shiftling", "Normal")
-        self._transform_state = False
-        
+
     def attack(self) -> str:
         if self._transform_state:
             return (f"{self._name} performs a boosted strike!")
@@ -42,11 +41,11 @@ class Shiftling(Creature, TransformCapability):
         self._transform_state = False
         return (f"{self._name} returns to normal")
 
+
 class Morphagon(Creature, TransformCapability):
     def __init__(self) -> None:
         super().__init__("Morphagon", "Normal/Dragon")
-        self._transform_state = False
-        
+
     def attack(self) -> str:
         if self._transform_state:
             return (f"{self._name} unleashes a devastating morph strike!")

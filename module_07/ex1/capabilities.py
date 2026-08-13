@@ -5,7 +5,11 @@ class HealCapability(ABC):
     def heal(self) -> str:
         pass
 
-class TransformCapability(ABC):    
+class TransformCapability(ABC):
+    def __init__(self) -> None:
+        self._transform_state = False
+        super().__init__()
+
     @abstractmethod
     def transform(self) -> str:
         pass
@@ -13,5 +17,3 @@ class TransformCapability(ABC):
     @abstractmethod
     def revert(self) -> str:
         pass
-
-
