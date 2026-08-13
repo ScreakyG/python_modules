@@ -1,0 +1,1 @@
+from .factories import FlameFactory, AquaFactory, CreatureFactory
