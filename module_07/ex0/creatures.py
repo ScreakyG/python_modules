@@ -3,9 +3,9 @@ from abc import abstractmethod, ABC
 
 class Creature(ABC):
     def __init__(self, name: str, type: str) -> None:
-        self._name = None
-        self._type = None
-
+        self._name = name
+        self._type = type
+        
     @abstractmethod
     def attack(self) -> str:
         pass
