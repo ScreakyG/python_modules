@@ -1,0 +1,9 @@
+[project]
+name = "loading"
+version = "0.1.0"
+dependencies = [
+    "numpy",
+    "pandas",
+    "requests",
+    "matplotlib"
+]
